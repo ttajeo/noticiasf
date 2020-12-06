@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<title>NOTICIAS MUNDO FRIKI</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE-EmulateIE9">
+		<meta name="author" content="Kevin Beltrán Delgado" >
+		<meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body id="app" class="pb-5">
+
+			<!-- Banner -->
+			<!--
+				Uso de el logo de la pagina o aplicacion, implementacion de imagenes y videos, para las noticias
+			-->
+				<section id="banner" data-video="images/banner">
+					<div class="inner">
+						<header>
+							<nav class="navbar navbar-expand-lg navbar-light bg-light"  class="text-right"></nav>
+							<div class="container-fluid">
+								<a class="navbar-brand animated fadeIn" href="index.html">
+								<b>INICIO</b>
+								</a>
+							<h1 class="text-center">NOTICIAS MUNDO FRIKI</h1>
+							<hr>
+						</header>
+					</div>
+					<hr>
+				</section>
+				<!-- Main -->
+				<main role="main" class="container backgrounded login-bgs">
+            
+					<div class="row justify-content-md-center">
+						<div class="col-md-8">
+							<div class="card">
+								<div class="card-body">
+									<h2 class="text-center">LOGIN</h2>
+								<hr>
+								<form id="login" method="POST" action="login.html" accept-charset="UTF-8" class="form-horizontal" >
+									<div class="form-group">
+										
+										<label for="nombre_usuario">Nick</label>
+										<input type="text" class="form-control" id="nombre_usuario" required>
+									</div>
+									  
+									<div class="form-group">
+									  <label for="contraseña">Contraseña</label>
+									  <input type="password" class="form-control" id="contraseña" required>
+									</div>
+									
+									  </div>
+									  <a href="index.html"  role="navigation" target="_parent" ><button>LOGIN</button></a>
+									  <br>
+									  <br>
+									  <a href="recuperar.html"  class="button button-login" target="_blank">RECUPERAR</a>
+								  </form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<h2>¿Quienes Somos?</h2>
+						<p>Somos personas que quieren entregarte informacion sobre  las noticias sobre los proximos video juegos, las ultimas tecnologias en tarjetas de video y gráficas, informacion sobre las ultimas consolas, informacion sobre los requisitos minimos de un juego y tips de como ganar o atravesar el punto del juego en donde estas.  </p>
+
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>. Videos: <a href="http://coverr.co/">Coverr</a>.</p>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/logica.js"></script>
+			<script src="assets/js/jquery-3.5.1.min.js"></script>
+			<script src="assets/css/bootstrap.css"></script>
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+				<!--Scripts 2-->
+				<script>
+					jQuery.validator.setDefaults({
+						debug: true,
+						success: "valid"
+						});
+					$("#login").validate({
+							rules:{
+								nombre_usuario:{
+									required: true,
+									minlength: 3
+								},
+								contraseña:{
+									required:true,
+									contraseña:true
+								},
+								message:{
+									nombre_usuario:{
+										required:"Ingrese su nick",
+										minlength:"Se esperaba más de 3 letras"
+									},
+									contraseña:{
+									required:"Ingrese su contraseña",
+									minlength:"Se esperaba el formato:'12334566',kkaeqeqera,@fa123dad"
+									}
+								}
+							}
+					});
+					
+					$(document).ready(function(){
+						$(":button").submit("click",function(){
+                console.log("click en button login")
+			});
+					function signIn(){
+  			 		 	var nombre_usuario = document.getElementById("nombre_usuario");
+    					var password = document.getElementById("password");
+        
+    					const promise = auth.signInWithEmailAndPassword(nombre_usuario.value, password.value);
+   		 				promise.catch(e => alert(e.message));
+    
+								alert("Sign In" + nombre_usuario.value)
+							}
+							//Funcion para salir de la sesion 
+									function signOut(){ 
+										auth.signOut();
+										alert("Signed Out");   
+									};
+					});
+				</script>
+	</body>
+</html>
