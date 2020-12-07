@@ -138,6 +138,21 @@
 								}
 							}
 						});
+						$(document).ready(function(){
+							$(":button").submit("click",function(){
+                					console.log("click en button Registrar")
+								});
+							function Register()
+							var nombre_usuario = document.getElementById("nombre_usuario");
+    					var password = document.getElementById("repetir_contraseña");
+							var password2 = document.getElementyById("contraseña");
+							var email = document.getElementyById("correo_eletrónico");
+        
+    					const promise = auth.signInWithEmailAndPassword(nombre_usuario.value, correo_eletrónico.value, contraseña.value);
+   		 				promise.catch(e => alert(e.message));
+    
+								alert("Register" + nombre_usuario.value)
+							}
 					});
 
 					
