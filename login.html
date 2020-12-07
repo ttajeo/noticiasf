@@ -41,7 +41,7 @@
 								<form id="login" method="POST" action="login.html" accept-charset="UTF-8" class="form-horizontal" >
 									<div class="form-group">
 										
-										<label for="nombre_usuario">Nick</label>
+										<label for="nombre_usuario">Nombre_usuario</label>
 										<input type="text" class="form-control" id="nombre_usuario" required>
 									</div>
 									  
@@ -105,7 +105,7 @@
 								},
 								contraseña:{
 									required:true,
-									contraseña:true
+									minlength:8;
 								},
 								message:{
 									nombre_usuario:{
@@ -114,7 +114,7 @@
 									},
 									contraseña:{
 									required:"Ingrese su contraseña",
-									minlength:"Se esperaba el formato:'12334566',kkaeqeqera,@fa123dad"
+									minlength:"Se esperaba más de 3 letras, combinación de numeros"
 									}
 								}
 							}
@@ -133,11 +133,6 @@
     
 								alert("Sign In" + nombre_usuario.value)
 							}
-							//Funcion para salir de la sesion 
-									function signOut(){ 
-										auth.signOut();
-										alert("Signed Out");   
-									};
 					});
 				</script>
 	</body>
